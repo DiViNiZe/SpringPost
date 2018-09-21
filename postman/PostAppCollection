@@ -1,0 +1,433 @@
+{
+	"info": {
+		"_postman_id": "d32a129e-6783-4409-a533-3e8e8022da24",
+		"name": "PostApplicatiom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "CreateUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3fc98aa7-24b0-404f-9f92-0e60bbc373e9",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"response OK?\"] = responseCode.code === 200;",
+									"pm.test(\"Username == Patric?\",function(){",
+									"    var jsonData = pm.response.json();",
+									"    var firstName = jsonData.firstName;",
+									"    var lastName = jsonData.lastName;",
+									"    pm.expect(firstName).to.eql(\"Patric\");",
+									"    pm.expect(lastName).to.eql(\"Emmel\");",
+									"})"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\"Patric\",\n\t\"lastName\":\"Emmel\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserList",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cbf896b1-de00-4b32-8aab-30ab3f6b7a40",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"response OK?\"] = responseCode.code === 200;",
+									"pm.test(\"First Of list must name partic\",function(){",
+									"    var jsonData = pm.response.json();",
+									"    var firstName = jsonData[0].firstName;",
+									"    var lastName = jsonData[0].lastName;",
+									"    pm.expect(firstName).to.eql(\"Patric\");",
+									"    pm.expect(lastName).to.eql(\"Emmel\");",
+									"})"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8080/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserByid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3e3e56af-9304-4583-8631-8d789db946bb",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"response OK?\"] = responseCode.code === 200;",
+									"pm.test(\"User With Id must equal patric!\",function(){",
+									"    var jsonData = pm.response.json();",
+									"    var firstName = jsonData.firstName;",
+									"    var lastName = jsonData.lastName;",
+									"    pm.expect(firstName).to.eql(\"Patric\");",
+									"    pm.expect(lastName).to.eql(\"Emmel\");",
+									"})"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8080/user/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "CreatePost",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7a39863e-81a4-4e0a-9a0f-cada2b0dfa1f",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"response OK?\"] = responseCode.code === 200;",
+									"pm.test(\"Response Must Equal to request body\",function(){",
+									"    var jsonData = pm.response.json();",
+									"    var title = jsonData.title;",
+									"    var content = jsonData.content;",
+									"    pm.expect(title).to.eql(\"Test Post By Postman\");",
+									"    pm.expect(content).to.eql(\"Test Post with postman in cloudnative apllicaation development by p'Nattawat so fun!\");",
+									"})"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\":\"Test Post By Postman\",\n\t\"content\":\"Test Post with postman in cloudnative apllicaation development by p'Nattawat so fun!\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/post/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e420c29c-863d-475a-a1db-760093927fc7",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"response OK?\"] = responseCode.code === 200;",
+									"pm.test(\"First of post list equal Test Post By Postman\",function(){",
+									"    var jsonData = pm.response.json();",
+									"    var title = jsonData[0].title;",
+									"    var content = jsonData[0].content;",
+									"    pm.expect(title).to.eql(\"Test Post By Postman\");",
+									"    pm.expect(content).to.eql(\"Test Post with postman in cloudnative apllicaation development by p'Nattawat so fun!\");",
+									"})"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8080/post",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostListByUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6477c4f4-fb47-4045-87be-81f450a15cd7",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"response OK?\"] = responseCode.code === 200;",
+									"pm.test(\"First of post list equal Test Post By Postman\",function(){",
+									"    var jsonData = pm.response.json();",
+									"    var title = jsonData[0].title;",
+									"    var content = jsonData[0].content;",
+									"    pm.expect(title).to.eql(\"Test Post By Postman\");",
+									"    pm.expect(content).to.eql(\"Test Post with postman in cloudnative apllicaation development by p'Nattawat so fun!\");",
+									"})"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8080/post/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "CreateComment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "80703524-423c-4cf7-ab6c-55a1afe63933",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"response OK?\"] = responseCode.code === 200;",
+									"pm.test(\"Comment Should Be HelloComment and From user Patric\",function(){",
+									"    var jsonData = pm.response.json();",
+									"    var title = jsonData.content;",
+									"    var user = jsonData.user;",
+									"    pm.expect(title).to.eql(\"Hello Comment\");",
+									"    pm.expect(user.firstName).to.eql(\"Patric\");",
+									"})"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"content\":\"Hello Comment\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/comment/1/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comment",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCommentListByPost",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "826485a4-2557-4fda-94f6-b54a1a6f526f",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"response OK?\"] = responseCode.code === 200;",
+									"pm.test(\"Comment List from post 1 must be Hello Comment\",function(){",
+									"    var jsonData = pm.response.json();",
+									"    var content = jsonData[0].content;",
+									"    pm.expect(content).to.eql(\"Hello Comment\");",
+									"})"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8080/comment/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "delete",
+			"item": [
+				{
+					"name": "DeleteUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8151ef7a-77bd-43e3-b91d-1aa53f017ed6",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"response OK?\"] = responseCode.code === 200;",
+									"pm.test(\"Deleted ID Should be 1\",function(){",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.eql(1);",
+									"})"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8080/user/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePost",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2766effa-d70d-4793-9811-77b0dfd8732c",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"response OK?\"] = responseCode.code === 200;",
+									"pm.test(\"Deleted ID Should be 1\",function(){",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.eql(1);",
+									"})"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8080/post/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

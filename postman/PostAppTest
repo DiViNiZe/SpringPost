@@ -1,0 +1,696 @@
+{
+	"id": "00789f57-3625-4a7a-9fc5-08b30d78f12e",
+	"name": "PostApplicatiom",
+	"allTests": [],
+	"timestamp": "2018-09-21T17:25:37.245Z",
+	"collection_id": "d32a129e-6783-4409-a533-3e8e8022da24",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "d32a129e-6783-4409-a533-3e8e8022da24",
+		"name": "PostApplicatiom",
+		"description": "",
+		"auth": null,
+		"events": null,
+		"variables": [],
+		"order": [],
+		"folders_order": [
+			"f6f8335e-4a99-45ad-89cd-eda3c86e7c73",
+			"1bc98886-753a-4444-a6de-8996a17d94b1",
+			"27e49feb-fe68-4ea2-9b4a-4090f491ff6f",
+			"fae089bb-7f36-43fe-8932-1cc157dee502"
+		],
+		"owner": "5340302",
+		"permissions": {},
+		"favorite": false,
+		"shared": false,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "CreateUser",
+			"id": "3aeef992-20b4-421d-8534-1d49de4b6df3",
+			"url": "localhost:8080/user",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Username == Patric?",
+				"status": "pass",
+				"response OK?": true
+			},
+			"testPassFailCounts": {
+				"Username == Patric?": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"948"
+			],
+			"allTests": [
+				{
+					"Username == Patric?": true,
+					"response OK?": true
+				}
+			],
+			"time": "948",
+			"totalRequestTime": "948",
+			"iterationResults": {}
+		},
+		{
+			"name": "GetUserList",
+			"id": "d0ca13f1-8f61-4eff-b671-a5b25c53a43c",
+			"url": "localhost:8080/user",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "First Of list must name partic",
+				"status": "pass",
+				"response OK?": true
+			},
+			"testPassFailCounts": {
+				"First Of list must name partic": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"672"
+			],
+			"allTests": [
+				{
+					"First Of list must name partic": true,
+					"response OK?": true
+				}
+			],
+			"time": "672",
+			"totalRequestTime": "672",
+			"iterationResults": {}
+		},
+		{
+			"name": "GetUserByid",
+			"id": "89b76ccf-9698-4cb9-b047-21d93c251b9b",
+			"url": "localhost:8080/user/1",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "User With Id must equal patric!",
+				"status": "pass",
+				"response OK?": true
+			},
+			"testPassFailCounts": {
+				"User With Id must equal patric!": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"72"
+			],
+			"allTests": [
+				{
+					"User With Id must equal patric!": true,
+					"response OK?": true
+				}
+			],
+			"time": "72",
+			"totalRequestTime": "72",
+			"iterationResults": {}
+		},
+		{
+			"name": "CreatePost",
+			"id": "8eca4cea-e9b0-4960-9320-9d786e65243c",
+			"url": "localhost:8080/post/1",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Response Must Equal to request body",
+				"status": "pass",
+				"response OK?": true
+			},
+			"testPassFailCounts": {
+				"Response Must Equal to request body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"92"
+			],
+			"allTests": [
+				{
+					"Response Must Equal to request body": true,
+					"response OK?": true
+				}
+			],
+			"time": "92",
+			"totalRequestTime": "92",
+			"iterationResults": {}
+		},
+		{
+			"name": "GetPostList",
+			"id": "e5f2d93e-a998-47e1-a8e9-b0f9ea04ea28",
+			"url": "localhost:8080/post",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "First of post list equal Test Post By Postman",
+				"status": "pass",
+				"response OK?": true
+			},
+			"testPassFailCounts": {
+				"First of post list equal Test Post By Postman": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"136"
+			],
+			"allTests": [
+				{
+					"First of post list equal Test Post By Postman": true,
+					"response OK?": true
+				}
+			],
+			"time": "136",
+			"totalRequestTime": "136",
+			"iterationResults": {}
+		},
+		{
+			"name": "GetPostListByUser",
+			"id": "028d6ed1-22cb-4c52-b2a8-94ccfa20f3a3",
+			"url": "localhost:8080/post/1",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "First of post list equal Test Post By Postman",
+				"status": "pass",
+				"response OK?": true
+			},
+			"testPassFailCounts": {
+				"First of post list equal Test Post By Postman": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"16"
+			],
+			"allTests": [
+				{
+					"First of post list equal Test Post By Postman": true,
+					"response OK?": true
+				}
+			],
+			"time": "16",
+			"totalRequestTime": "16",
+			"iterationResults": {}
+		},
+		{
+			"name": "CreateComment",
+			"id": "af33a5c2-91e8-4180-9c7d-8e20f894a629",
+			"url": "localhost:8080/comment/1/1",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Comment Should Be HelloComment and From user Patric",
+				"status": "pass",
+				"response OK?": true
+			},
+			"testPassFailCounts": {
+				"Comment Should Be HelloComment and From user Patric": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"68"
+			],
+			"allTests": [
+				{
+					"Comment Should Be HelloComment and From user Patric": true,
+					"response OK?": true
+				}
+			],
+			"time": "68",
+			"totalRequestTime": "68",
+			"iterationResults": {}
+		},
+		{
+			"name": "GetCommentListByPost",
+			"id": "2ceeac97-5800-48bb-b8ae-9426ae102233",
+			"url": "localhost:8080/comment/1",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Comment List from post 1 must be Hello Comment",
+				"status": "pass",
+				"response OK?": true
+			},
+			"testPassFailCounts": {
+				"Comment List from post 1 must be Hello Comment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"52"
+			],
+			"allTests": [
+				{
+					"Comment List from post 1 must be Hello Comment": true,
+					"response OK?": true
+				}
+			],
+			"time": "52",
+			"totalRequestTime": "52",
+			"iterationResults": {}
+		},
+		{
+			"name": "DeleteUser",
+			"id": "d4b84f64-01ee-4eeb-9d77-3d0669ecf54f",
+			"url": "localhost:8080/user/1",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Deleted ID Should be 1",
+				"status": "pass",
+				"response OK?": true
+			},
+			"testPassFailCounts": {
+				"Deleted ID Should be 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"48"
+			],
+			"allTests": [
+				{
+					"Deleted ID Should be 1": true,
+					"response OK?": true
+				}
+			],
+			"time": "48",
+			"totalRequestTime": "48",
+			"iterationResults": {}
+		},
+		{
+			"name": "DeletePost",
+			"id": "d531fc28-a3c7-4269-add9-a892db825447",
+			"url": "localhost:8080/post/1",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Deleted ID Should be 1",
+				"status": "pass",
+				"response OK?": true
+			},
+			"testPassFailCounts": {
+				"Deleted ID Should be 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"44"
+			],
+			"allTests": [
+				{
+					"Deleted ID Should be 1": true,
+					"response OK?": true
+				}
+			],
+			"time": "44",
+			"totalRequestTime": "44",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 20,
+	"totalFail": 0,
+	"totalTime": 2148,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "CreateUser",
+			"id": "3aeef992-20b4-421d-8534-1d49de4b6df3",
+			"url": "localhost:8080/user",
+			"time": "2018-09-21T17:25:37.245Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Username == Patric?": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GetUserList",
+			"id": "d0ca13f1-8f61-4eff-b671-a5b25c53a43c",
+			"url": "localhost:8080/user",
+			"time": "2018-09-21T17:25:37.245Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"First Of list must name partic": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GetUserByid",
+			"id": "89b76ccf-9698-4cb9-b047-21d93c251b9b",
+			"url": "localhost:8080/user/1",
+			"time": "2018-09-21T17:25:37.245Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"User With Id must equal patric!": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "CreatePost",
+			"id": "8eca4cea-e9b0-4960-9320-9d786e65243c",
+			"url": "localhost:8080/post/1",
+			"time": "2018-09-21T17:25:37.245Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Response Must Equal to request body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GetPostList",
+			"id": "e5f2d93e-a998-47e1-a8e9-b0f9ea04ea28",
+			"url": "localhost:8080/post",
+			"time": "2018-09-21T17:25:37.245Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"First of post list equal Test Post By Postman": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GetPostListByUser",
+			"id": "028d6ed1-22cb-4c52-b2a8-94ccfa20f3a3",
+			"url": "localhost:8080/post/1",
+			"time": "2018-09-21T17:25:37.245Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"First of post list equal Test Post By Postman": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "CreateComment",
+			"id": "af33a5c2-91e8-4180-9c7d-8e20f894a629",
+			"url": "localhost:8080/comment/1/1",
+			"time": "2018-09-21T17:25:37.245Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Comment Should Be HelloComment and From user Patric": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "GetCommentListByPost",
+			"id": "2ceeac97-5800-48bb-b8ae-9426ae102233",
+			"url": "localhost:8080/comment/1",
+			"time": "2018-09-21T17:25:37.245Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Comment List from post 1 must be Hello Comment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "DeleteUser",
+			"id": "d4b84f64-01ee-4eeb-9d77-3d0669ecf54f",
+			"url": "localhost:8080/user/1",
+			"time": "2018-09-21T17:25:37.245Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Deleted ID Should be 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "DeletePost",
+			"id": "d531fc28-a3c7-4269-add9-a892db825447",
+			"url": "localhost:8080/post/1",
+			"time": "2018-09-21T17:25:37.245Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Deleted ID Should be 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response OK?": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}
