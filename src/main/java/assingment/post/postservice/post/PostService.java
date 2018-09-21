@@ -16,6 +16,10 @@ public class PostService {
     return  postRepository.findAll();
   }
 
+  public List<Post> getPostByUser(long id){
+    return postRepository.findByUserId(id);
+  }
+
   public Post getPostById(long id){
     return postRepository.getOne(id);
   }
@@ -31,5 +35,6 @@ public class PostService {
   public Post getPostWithUser(){
     return null;
   }
+
   
 }

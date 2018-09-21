@@ -28,11 +28,13 @@ public class PostController {
   @GetMapping("/post")
   public ResponseEntity<List<Post>> getAllPostList() {
     List<Post> post = postService.getAllPost();
-    post.forEach(p -> {
-      long pid = p.getUser().getId();
-      p.setUser(userService.getUserById(pid));
-    });
     return new ResponseEntity<>(post,HttpStatus.OK);
+  }
+
+  @GetMapping("/post/{userId}")
+  public ResponseEntity<List<Post>> getPostByUser(@PathVariable long userId) {
+    List<Post> post = postService.getAllPost();
+    return new ResponseEntity<List<Post>>(post,HttpStatus.OK);
   }
 
 
